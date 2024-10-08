@@ -10,7 +10,7 @@ namespace Chapter.Observer
         {
             get { return score; }
         }
-        private ScoreManager score;
+        public ScoreManager score;
 
         void Awake()
         {
@@ -28,10 +28,10 @@ namespace Chapter.Observer
 
         }
 
-        public void AddScore()
+        public void AddScore(int amount)
         {
-            score += 1;
+            score += amount;
             NotifyObservers();
-        }
+        }//adds score and notify the observer to update
     }
 }

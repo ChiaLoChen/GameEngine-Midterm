@@ -6,7 +6,7 @@ namespace Chapter.Observer
 {
     public class ScoreManager : Observer
     {
-        private int _score;
+        public int _score;
         private PlayerController _player;
 
         void OnGUI()
@@ -18,18 +18,7 @@ namespace Chapter.Observer
             GUILayout.EndHorizontal ();
             GUILayout.EndArea();
         
-        }
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        }//show the player's current score and would update when being notify
 
         public override void Notify(Subject subject)
         {
